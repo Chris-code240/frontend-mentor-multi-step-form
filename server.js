@@ -1,9 +1,10 @@
 const express = require("express")
 const expressEJS = require("express-ejs-layouts")
-
+const cors = require("cors")
 
 const app = express()
 
+app.use(cors({origin:"*"}))
 app.use(expressEJS)
 app.set("view engine","ejs")
 app.set('layout','layouts/layout')
