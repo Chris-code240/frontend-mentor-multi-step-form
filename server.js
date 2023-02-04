@@ -4,13 +4,17 @@ const cors = require("cors")
 
 const app = express()
 
-app.use(cors({origin:"*"}))
+
 app.use(expressEJS)
 app.set("view engine","ejs")
 app.set('layout','layouts/layout')
 app.set('views',__dirname + '/views')
 app.use(express.static("public"))
-
+app.use(cors({
+    origin: "*",
+    methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+    allowedHeaders: ['Origin','Content-Type','X-Requested-With','Accept']
+}))
 app.get('/',(req,res)=>{
     res.render('pages/index',{title:"Home"})
 })
