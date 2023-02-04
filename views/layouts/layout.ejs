@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title  %> </title>
+    <link rel="stylesheet" type="text/css" href="\css\output.css">
+</head>
+<body class="bg-Lightblue h-screen w-screen">
+    <section class="container mx-auto h-full w-2/3 md:h-3/4 md:w-1/2">
+        <div class="relative h-full p-2 w-full flex flex-col space-between items-start rounded-lg md:bg-white  md:flex-row items-center md:items-start space-x-6">
+            <%- include('../partials/nav.ejs') %>
+            <%- body  %>
+            <div class="absolute bottom-0 md:hidden bg-white buttons flex justify-between tems-center w-screen px-6">
+                <button class="bg-transparent py-2 px-6 text-Marineblue rounded-lg hover:font-bold hover:border-transparent">Go Back</button>
+
+                <button class="bg-marineBlue border-2 border-transparent py-2 px-6 text-white rounded-lg hover:bg-Purplishblue hover:text-white hover:border-transparent">Next Step</button>
+            </div> 
+        </div>
+    </section>
+</body>
+</html>

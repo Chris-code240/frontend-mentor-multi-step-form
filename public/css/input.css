@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.step:hover .step-number{
+    border-color: transparent;
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+}
+nav{
+    background-repeat: no-repeat;
+}
