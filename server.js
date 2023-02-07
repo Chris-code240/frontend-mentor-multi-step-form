@@ -9,7 +9,8 @@ app.use(expressEJS)
 app.set("view engine","ejs")
 app.set('layout','layouts/layout')
 app.set('views',__dirname + '/views')
-app.use(express.static('/public'))
+app.use(express.static('/public')) 
+app.use(express.static(__dirname + "/public/"))
 app.use(cors({
     origin: "*",
     methods: ['GET','POST','PUT','DELETE','OPTIONS'],
